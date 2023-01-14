@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body background="./img/fondoDePagina.jpg">
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <img src="./img/48x48.png" id="logo">
+                </div>
+                <div class="two columns u-pull-right">
+                    <ul>
+                        <li class="submenu">
+                            <img src="img/cart.png" id="img-carrito">
+                            <div id="carrito">
+
+                                <table id="lista-carrito" class="u-full-width">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th>Cantidad</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+
+                                <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="contenido-hero">
+                        <h2>Tiendita</h2>
+                        <p>Todos los juegos a $150</p>
+                        <form action="#" id="busqueda" method="post" class="formulario">
+                            <input class="u-full-width" type="text" placeholder="¿Que juego buscabas?" id="buscador">
+                            <input type="submit" id="submit-buscador" class="submit-buscador">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                <div class="four columns icono icono1">
+                    <p>Contactanos<br>
+                        Si se te ocurre que debemos incluir algun titulo dejanos saberlo</p>
+                </div>
+                <div class="four columns icono icono2">
+                    <p>Clasicos<br>
+                        Explora los juegos más resaltantes</p>
+                </div>
+                <div class="four columns icono icono3">
+                    <p>Descarga cuando quieras<br>
+                        Cuando lo adquieres lo puedes descargar una y otra vez</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lista-juegos" class="container">
+        <h1 id="encabezado" class="encabezado">La Tienda del Buhonero</h1>
+
+
+
+        <!-- Comienzo de la seccion #1 -->
+
+
+     <section>
+        <div>
+          <h3>
+            <ul id="listaDePaginas1">
+              <li class="lista"> <a href="index.html"><button><<</button></a></li>
+              <li class="lista"> <a href="tiendita.html">1</a></li>
+              <li class="lista"> <a href="tiendita2.html">2</a></li>
+              <li class="lista"> <a href="tiendita3.html">3</a></li>
+              <li class="lista"> <a href="tiendita4.html">4</a></li>
+              <li class="lista"> <a href="tiendita5.html">5</a></li>
+              <li class="lista"> <a href="tiendita2.html"><button>>></button></a></li>
+            </ul>
+          </h3>
+        </div>
+      </section>
+
+
+
+
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="https://i.pinimg.com/originals/5d/9b/3e/5d9b3e5b840c808d2c1f6a272d9f9e0b.jpg"
+                        class="imagen-juego u-full-width">
+                    <div class="info-card">
+                        <h4>Medievil</h4>
+                        <p>PSX</p>
+                        <img id="detalles" src="img/estrellas.png">
+                        <p class="precio">$600 <span class="u-pull-right ">$150</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+                <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="data:image/jpeg;base64,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"
+                        class="imagen-juego u-full-width">
+                    <div class="info-card">
+                        <h4>Tekken 2</h4>
+                        <p>PSX</p>
+                        <img id="detalles" src="img/estrellas.png">
+                        <p class="precio">$600 <span class="u-pull-right ">$150</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="https://cloud10.todocoleccion.online/videojuegos-consola-playstation1/tc/2016/03/10/23/54957850.jpg"
+                        class="imagen-juego u-full-width">
+                    <div class="info-card">
+                        <h4>Legacy Of Kain: Soul Reaver</h4>
+                        <p>PSX</p>
+                        <img id="detalles" src="img/estrellas.png">
+                        <p class="precio">$600 <span class="u-pull-right ">$150</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+                <!--.card-->
+            </div>
+
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="https://i.pinimg.com/236x/c8/23/c0/c823c09927297d93c9e02ecfa0d27d75.jpg"
+                        class="imagen-juego u-full-width">
+                    <div class="info-card">
+                        <h4>Quake 2</h4>
+                        <p>PSX</p>
+                        <img id="detalles" src="img/estrellas.png">
+                        <p class="precio">$600 <span class="u-pull-right ">$150</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+                <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="https://as01.epimg.net/meristation/imagenes/2016/10/11/game_cover/1476180000.jpg"
+                        class="imagen-juego u-full-width">
+                    <div class="info-card">
+                        <h4>Wu-Tang Shaolin Style</h4>
+                        <p>PSX</p>
+                        <img id="detalles" src="img/estrellas.png">
+                        <p class="precio">$600 <span class="u-pull-right ">$150</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+                <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="https://i.pinimg.com/236x/3f/25/dd/3f25ddb8c41eb6fa03073a19c100a9bb.jpg"
+                        class="imagen-juego u-full-width">
+                    <div class="info-card">
+                        <h4>Castlevania</h4>
+                        <p>PSX</p>
+                        <img id="detalles" src="img/estrellas.png">
+                        <p class="precio">$600 <span class="u-pull-right ">$150</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+                <!--.card-->
+            </div>
+        </div>
+        <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/613N52J2A3L.__AC_SX300_SY300_QL70_ML2_.jpg"
+                        class="imagen-juego u-full-width">
+                    <div class="info-card">
+                        <h4>Alone In The Dark</h4>
+                        <p>PSX</p>
+                        <img id="detalles" src="img/estrellas.png">
+                        <p class="precio">$600 <span class="u-pull-right ">$150</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+                <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="https://i.pinimg.com/236x/27/fc/12/27fc128234c22f3e8be2399c7858415b--html.jpg"
+                        alt="Bloddy Roar II" class="imagen-juego u-full-width">
+                    <div class="info-card">
+                        <h4>Bloddy Roar II</h4>
+                        <p>PSX</p>
+                        <img id="detalles" src="img/estrellas.png">
+                        <p class="precio">$600 <span class="u-pull-right ">$150</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+                <!--.card-->
+            </div>
+            <div class="four columns">
+                <div class="card">
+                    <img src="https://psxforever.com/wp-content/uploads/2018/07/resident_evil_3_psx-psp-eboot-GamesMega.jpg"
+                        class="imagen-juego u-full-width">
+                    <div class="info-card">
+                        <h4>Resident Evil 3: Nemesis</h4>
+                        <p>PSX</p>
+                        <img id="detalles" src="img/estrellas.png">
+                        <p class="precio">$600 <span class="u-pull-right ">$150</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar
+                            Al Carrito</a>
+                    </div>
+                </div>
+                <!--.card-->
+            </div>
+        </div>
+        <!--.row-->
+    </div>
+
+
+    <!-- COMIENZO DEL FOOTER -->
+
+
+    <footer>
+        <div class="container-footer">
+        <div class="footer bg-dark">
+      
+            <div class="medias">
+      
+               
+              <div class="caja">
+                <h2>Empresa</h2>
+                <ul>
+                    <li><a href="#" style="text-decoration: none;">Sobre Nosotros</a></li>
+                    <li><a href="#" style="text-decoration: none;">Contactanos</a></li>
+                    <li><a href="#" style="text-decoration: none;">Trabaja con nosotros</a></li>
+                </ul>
+            </div>
+      
+            <div class="caja">
+                <h2>Comprar</h2>
+                <ul>
+                    <li><a href="#" style="text-decoration: none;">Como Comprar</a></li>
+                    <li><a href="#" style="text-decoration: none;">Lista de Juegos</a></li>
+                    <li><a href="#" style="text-decoration: none;">Colecciones</a></li>
+                    <li><a href="#" style="text-decoration: none;">Categorias</a></li>
+                </ul>
+            </div>
+      
+            <div class="caja">
+                <h2>Ayuda</h2>
+                <ul>
+                    <li><a href="#" style="text-decoration: none ;">FAQ</a></li>
+                    <li><a href="#" style="text-decoration: none;">Preguntas Frecuentes</a></li>
+                    <li><a href="#" style="text-decoration: none;">¿Como comprar?</a></li>
+                </ul>
+            </div>
+      
+            <div class="caja">
+                <h2>Comunidad</h2>
+                <ul>
+                    <li><a href="#" style="text-decoration: none;">Blog</a></li>
+                    <li><a href="#" style="text-decoration: none;">Twitch</a></li>
+                    <li><a href="#" style="text-decoration: none;">Discord</a></li>
+                </ul>
+            </div>
+      
+            </div>
+      
+              <div class="caja" id="cajaDeRedes">
+                  <div>
+                      <ul>
+                        <a href="http://www.instagram.com" target="_blank"><img class="redes" src="https://www.msm.gov.ar/wp-content/uploads/2020/05/new-instagram-logo-png-transparent-light.png" alt="instagram"></a>
+                        <a href="http://www.facebook.com" target="_blank"><img class="redes" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="facebok"></a>
+                        <a href="http://www.twich.com" target="_blank"><img class="redes" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c540.png" alt="twitch"></a>
+                        <a href="http://www.twitter.com" target="_blank"><img class="redes"  src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png" alt="twiter"></a>
+                      </ul>
+                  </div>
+              </div>
+      
+          
+        </div>
+          <div class="copyright">
+            <p>Todos los derechos reservados © 2022 | <i>Iswaldo Mendoza</i></p>
+          </div>
+        </div>
+        </footer>
+        <!-- fin del footer -->
+
+    <script src="js/carrito.js"></script>
+
+</body>
+
+</html>
